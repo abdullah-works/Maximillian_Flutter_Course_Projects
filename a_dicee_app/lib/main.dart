@@ -12,12 +12,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.blue,
+        backgroundColor: const Color.fromARGB(255, 42, 42, 42),
         appBar: AppBar(
           title: const Center(
             child: Text('Dicee App'),
           ),
-          backgroundColor: const Color.fromARGB(255, 42, 42, 42),
+          backgroundColor: Colors.blue,
         ),
         body: const DicePage(),
       ),
@@ -35,6 +35,23 @@ class DicePage extends StatefulWidget {
 class _DicePageState extends State<DicePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: TextButton(
+              onPressed: () {},
+              child: Image.asset('assets/images/dice1.png'),
+            ),
+          ),
+          Expanded(
+            child: TextButton(
+              onPressed: () {},
+              child: Image.asset('assets/images/dice3.png'),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
